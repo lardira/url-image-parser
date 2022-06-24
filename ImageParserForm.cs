@@ -18,6 +18,8 @@ namespace ImageParser
         {
             InitializeComponent();
 
+            //TODO: make hints on textboxes disappear upon a click
+
             savePathTextBox.Text = DefaultSavePath;
             savePathFolderBrowserDialog.RootFolder = Environment.SpecialFolder.Desktop;
         }
@@ -67,7 +69,6 @@ namespace ImageParser
 
         private void savePathButton_Click(object sender, EventArgs e)
         {
-            //TODO:open file dialog and let the user choose the directory for save path
             if (savePathFolderBrowserDialog.ShowDialog() == DialogResult.OK)
             {
                 savePathTextBox.Text = savePathFolderBrowserDialog.SelectedPath;
