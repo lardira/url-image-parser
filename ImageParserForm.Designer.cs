@@ -30,15 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImageParserForm));
             this.settingsGroupBox = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.domainUpDown3 = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown4 = new System.Windows.Forms.DomainUpDown();
+            this.minImageSizeLabel = new System.Windows.Forms.Label();
+            this.maxImageSizeLabel = new System.Windows.Forms.Label();
+            this.minImageSizeYLabel = new System.Windows.Forms.Label();
+            this.maxImageSizeYLabel = new System.Windows.Forms.Label();
+            this.minImageSizeXLabel = new System.Windows.Forms.Label();
+            this.maxImageSizeXLabel = new System.Windows.Forms.Label();
             this.filtersLabel = new System.Windows.Forms.Label();
-            this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
-            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
             this.URLLabel = new System.Windows.Forms.Label();
             this.URLtextBox = new System.Windows.Forms.TextBox();
             this.savePathButton = new System.Windows.Forms.Button();
@@ -48,26 +46,32 @@
             this.imageFound = new System.Windows.Forms.PictureBox();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.startButton = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.maxImageXUpDown = new System.Windows.Forms.NumericUpDown();
+            this.minImageXUpDown = new System.Windows.Forms.NumericUpDown();
+            this.maxImageYUpDown = new System.Windows.Forms.NumericUpDown();
+            this.minImageYUpDown = new System.Windows.Forms.NumericUpDown();
             this.settingsGroupBox.SuspendLayout();
             this.imageFoundGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageFound)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxImageXUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minImageXUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxImageYUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minImageYUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // settingsGroupBox
             // 
-            this.settingsGroupBox.Controls.Add(this.label6);
-            this.settingsGroupBox.Controls.Add(this.label5);
-            this.settingsGroupBox.Controls.Add(this.label3);
-            this.settingsGroupBox.Controls.Add(this.label4);
-            this.settingsGroupBox.Controls.Add(this.label2);
-            this.settingsGroupBox.Controls.Add(this.label1);
-            this.settingsGroupBox.Controls.Add(this.domainUpDown3);
-            this.settingsGroupBox.Controls.Add(this.domainUpDown4);
+            this.settingsGroupBox.Controls.Add(this.minImageYUpDown);
+            this.settingsGroupBox.Controls.Add(this.maxImageYUpDown);
+            this.settingsGroupBox.Controls.Add(this.minImageXUpDown);
+            this.settingsGroupBox.Controls.Add(this.maxImageXUpDown);
+            this.settingsGroupBox.Controls.Add(this.minImageSizeLabel);
+            this.settingsGroupBox.Controls.Add(this.maxImageSizeLabel);
+            this.settingsGroupBox.Controls.Add(this.minImageSizeYLabel);
+            this.settingsGroupBox.Controls.Add(this.maxImageSizeYLabel);
+            this.settingsGroupBox.Controls.Add(this.minImageSizeXLabel);
+            this.settingsGroupBox.Controls.Add(this.maxImageSizeXLabel);
             this.settingsGroupBox.Controls.Add(this.filtersLabel);
-            this.settingsGroupBox.Controls.Add(this.domainUpDown2);
-            this.settingsGroupBox.Controls.Add(this.domainUpDown1);
             this.settingsGroupBox.Controls.Add(this.URLLabel);
             this.settingsGroupBox.Controls.Add(this.URLtextBox);
             this.settingsGroupBox.Controls.Add(this.savePathButton);
@@ -81,69 +85,71 @@
             this.settingsGroupBox.TabStop = false;
             this.settingsGroupBox.Text = "Settings";
             // 
-            // label3
+            // minImageSizeLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(220, 215);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(22, 21);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "y:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.minImageSizeLabel.AutoSize = true;
+            this.minImageSizeLabel.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
+            this.minImageSizeLabel.Location = new System.Drawing.Point(6, 215);
+            this.minImageSizeLabel.Name = "minImageSizeLabel";
+            this.minImageSizeLabel.Size = new System.Drawing.Size(116, 21);
+            this.minImageSizeLabel.TabIndex = 15;
+            this.minImageSizeLabel.Text = "Min Image Size";
+            this.minImageSizeLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // label4
+            // maxImageSizeLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(220, 187);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 21);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "y:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.maxImageSizeLabel.AutoSize = true;
+            this.maxImageSizeLabel.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
+            this.maxImageSizeLabel.Location = new System.Drawing.Point(6, 188);
+            this.maxImageSizeLabel.Name = "maxImageSizeLabel";
+            this.maxImageSizeLabel.Size = new System.Drawing.Size(118, 21);
+            this.maxImageSizeLabel.TabIndex = 14;
+            this.maxImageSizeLabel.Text = "Max Image Size";
+            this.maxImageSizeLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // label2
+            // minImageSizeYLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(126, 215);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(22, 21);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "x:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.minImageSizeYLabel.AutoSize = true;
+            this.minImageSizeYLabel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold);
+            this.minImageSizeYLabel.Location = new System.Drawing.Point(220, 215);
+            this.minImageSizeYLabel.Name = "minImageSizeYLabel";
+            this.minImageSizeYLabel.Size = new System.Drawing.Size(22, 21);
+            this.minImageSizeYLabel.TabIndex = 13;
+            this.minImageSizeYLabel.Text = "y:";
+            this.minImageSizeYLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // label1
+            // maxImageSizeYLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(126, 188);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 21);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "x:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.maxImageSizeYLabel.AutoSize = true;
+            this.maxImageSizeYLabel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold);
+            this.maxImageSizeYLabel.Location = new System.Drawing.Point(220, 187);
+            this.maxImageSizeYLabel.Name = "maxImageSizeYLabel";
+            this.maxImageSizeYLabel.Size = new System.Drawing.Size(22, 21);
+            this.maxImageSizeYLabel.TabIndex = 12;
+            this.maxImageSizeYLabel.Text = "y:";
+            this.maxImageSizeYLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // domainUpDown3
+            // minImageSizeXLabel
             // 
-            this.domainUpDown3.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.domainUpDown3.Location = new System.Drawing.Point(154, 188);
-            this.domainUpDown3.Name = "domainUpDown3";
-            this.domainUpDown3.Size = new System.Drawing.Size(56, 25);
-            this.domainUpDown3.TabIndex = 8;
-            this.domainUpDown3.Text = "0";
-            this.domainUpDown3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.minImageSizeXLabel.AutoSize = true;
+            this.minImageSizeXLabel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold);
+            this.minImageSizeXLabel.Location = new System.Drawing.Point(126, 215);
+            this.minImageSizeXLabel.Name = "minImageSizeXLabel";
+            this.minImageSizeXLabel.Size = new System.Drawing.Size(22, 21);
+            this.minImageSizeXLabel.TabIndex = 11;
+            this.minImageSizeXLabel.Text = "x:";
+            this.minImageSizeXLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // domainUpDown4
+            // maxImageSizeXLabel
             // 
-            this.domainUpDown4.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.domainUpDown4.Location = new System.Drawing.Point(154, 216);
-            this.domainUpDown4.Name = "domainUpDown4";
-            this.domainUpDown4.Size = new System.Drawing.Size(56, 25);
-            this.domainUpDown4.TabIndex = 9;
-            this.domainUpDown4.Text = "0";
-            this.domainUpDown4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.maxImageSizeXLabel.AutoSize = true;
+            this.maxImageSizeXLabel.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Bold);
+            this.maxImageSizeXLabel.Location = new System.Drawing.Point(126, 188);
+            this.maxImageSizeXLabel.Name = "maxImageSizeXLabel";
+            this.maxImageSizeXLabel.Size = new System.Drawing.Size(22, 21);
+            this.maxImageSizeXLabel.TabIndex = 10;
+            this.maxImageSizeXLabel.Text = "x:";
+            this.maxImageSizeXLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // filtersLabel
             // 
@@ -155,26 +161,6 @@
             this.filtersLabel.TabIndex = 7;
             this.filtersLabel.Text = "Filters";
             this.filtersLabel.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // domainUpDown2
-            // 
-            this.domainUpDown2.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.domainUpDown2.Location = new System.Drawing.Point(248, 188);
-            this.domainUpDown2.Name = "domainUpDown2";
-            this.domainUpDown2.Size = new System.Drawing.Size(56, 25);
-            this.domainUpDown2.TabIndex = 6;
-            this.domainUpDown2.Text = "0";
-            this.domainUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // domainUpDown1
-            // 
-            this.domainUpDown1.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
-            this.domainUpDown1.Location = new System.Drawing.Point(248, 216);
-            this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.Size = new System.Drawing.Size(56, 25);
-            this.domainUpDown1.TabIndex = 6;
-            this.domainUpDown1.Text = "0";
-            this.domainUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // URLLabel
             // 
@@ -279,28 +265,47 @@
             this.startButton.TabStop = false;
             this.startButton.Text = "START";
             this.startButton.UseVisualStyleBackColor = false;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
-            // label5
+            // maxImageXUpDown
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
-            this.label5.Location = new System.Drawing.Point(6, 188);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 21);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Max Image Size";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.maxImageXUpDown.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.maxImageXUpDown.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.maxImageXUpDown.Location = new System.Drawing.Point(154, 188);
+            this.maxImageXUpDown.Name = "maxImageXUpDown";
+            this.maxImageXUpDown.Size = new System.Drawing.Size(56, 25);
+            this.maxImageXUpDown.TabIndex = 16;
+            this.maxImageXUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label6
+            // minImageXUpDown
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Yu Gothic UI", 12F);
-            this.label6.Location = new System.Drawing.Point(6, 215);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(116, 21);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "Min Image Size";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.minImageXUpDown.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.minImageXUpDown.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.minImageXUpDown.Location = new System.Drawing.Point(154, 215);
+            this.minImageXUpDown.Name = "minImageXUpDown";
+            this.minImageXUpDown.Size = new System.Drawing.Size(56, 25);
+            this.minImageXUpDown.TabIndex = 16;
+            this.minImageXUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // maxImageYUpDown
+            // 
+            this.maxImageYUpDown.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.maxImageYUpDown.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.maxImageYUpDown.Location = new System.Drawing.Point(248, 188);
+            this.maxImageYUpDown.Name = "maxImageYUpDown";
+            this.maxImageYUpDown.Size = new System.Drawing.Size(56, 25);
+            this.maxImageYUpDown.TabIndex = 16;
+            this.maxImageYUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // minImageYUpDown
+            // 
+            this.minImageYUpDown.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.minImageYUpDown.Font = new System.Drawing.Font("Yu Gothic UI", 10F);
+            this.minImageYUpDown.Location = new System.Drawing.Point(248, 215);
+            this.minImageYUpDown.Name = "minImageYUpDown";
+            this.minImageYUpDown.Size = new System.Drawing.Size(56, 25);
+            this.minImageYUpDown.TabIndex = 16;
+            this.minImageYUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ImageParserForm
             // 
@@ -324,6 +329,10 @@
             this.settingsGroupBox.PerformLayout();
             this.imageFoundGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imageFound)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxImageXUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minImageXUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxImageYUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minImageYUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,17 +349,17 @@
         private System.Windows.Forms.TextBox savePathTextBox;
         private System.Windows.Forms.GroupBox imageFoundGroupBox;
         private System.Windows.Forms.PictureBox imageFound;
-        private System.Windows.Forms.DomainUpDown domainUpDown1;
-        private System.Windows.Forms.DomainUpDown domainUpDown3;
-        private System.Windows.Forms.DomainUpDown domainUpDown4;
         private System.Windows.Forms.Label filtersLabel;
-        private System.Windows.Forms.DomainUpDown domainUpDown2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label minImageSizeYLabel;
+        private System.Windows.Forms.Label maxImageSizeYLabel;
+        private System.Windows.Forms.Label minImageSizeXLabel;
+        private System.Windows.Forms.Label maxImageSizeXLabel;
+        private System.Windows.Forms.Label minImageSizeLabel;
+        private System.Windows.Forms.Label maxImageSizeLabel;
+        private System.Windows.Forms.NumericUpDown minImageYUpDown;
+        private System.Windows.Forms.NumericUpDown maxImageYUpDown;
+        private System.Windows.Forms.NumericUpDown minImageXUpDown;
+        private System.Windows.Forms.NumericUpDown maxImageXUpDown;
     }
 }
 
