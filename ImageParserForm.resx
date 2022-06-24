@@ -505,7 +505,7 @@
     <value>3</value>
   </data>
   <data name="URLtextBox.Text" xml:space="preserve">
-    <value> type url here...</value>
+    <value> type url here... </value>
   </data>
   <data name="&gt;&gt;URLtextBox.Name" xml:space="preserve">
     <value>URLtextBox</value>
@@ -595,7 +595,7 @@
     <value>0</value>
   </data>
   <data name="savePathTextBox.Text" xml:space="preserve">
-    <value> choose the destination folder...</value>
+    <value> choose the destination folder... </value>
   </data>
   <data name="savePathTextBox.WordWrap" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -638,6 +638,42 @@
   </data>
   <data name="imageFoundGroupBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>None</value>
+  </data>
+  <data name="&gt;&gt;imageFound.Name" xml:space="preserve">
+    <value>imageFound</value>
+  </data>
+  <data name="&gt;&gt;imageFound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imageFound.Parent" xml:space="preserve">
+    <value>imageFoundGroupBox</value>
+  </data>
+  <data name="&gt;&gt;imageFound.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="imageFoundGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 274</value>
+  </data>
+  <data name="imageFoundGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>310, 202</value>
+  </data>
+  <data name="imageFoundGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="imageFoundGroupBox.Text" xml:space="preserve">
+    <value>Image Found</value>
+  </data>
+  <data name="&gt;&gt;imageFoundGroupBox.Name" xml:space="preserve">
+    <value>imageFoundGroupBox</value>
+  </data>
+  <data name="&gt;&gt;imageFoundGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imageFoundGroupBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;imageFoundGroupBox.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="imageFound.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
@@ -779,30 +815,6 @@
   </data>
   <data name="&gt;&gt;imageFound.ZOrder" xml:space="preserve">
     <value>0</value>
-  </data>
-  <data name="imageFoundGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 274</value>
-  </data>
-  <data name="imageFoundGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>310, 202</value>
-  </data>
-  <data name="imageFoundGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="imageFoundGroupBox.Text" xml:space="preserve">
-    <value>Image Found</value>
-  </data>
-  <data name="&gt;&gt;imageFoundGroupBox.Name" xml:space="preserve">
-    <value>imageFoundGroupBox</value>
-  </data>
-  <data name="&gt;&gt;imageFoundGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;imageFoundGroupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;imageFoundGroupBox.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="progressBar.Location" type="System.Drawing.Point, System.Drawing">
     <value>-6, 533</value>

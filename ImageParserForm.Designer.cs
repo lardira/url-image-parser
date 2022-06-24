@@ -177,6 +177,8 @@
             resources.ApplyResources(this.URLtextBox, "URLtextBox");
             this.URLtextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.URLtextBox.Name = "URLtextBox";
+            this.URLtextBox.MouseEnter += new System.EventHandler(this.URLtextBox_MouseEnter);
+            this.URLtextBox.MouseLeave += new System.EventHandler(this.URLtextBox_MouseLeave);
             // 
             // savePathButton
             // 
@@ -198,6 +200,8 @@
             resources.ApplyResources(this.savePathTextBox, "savePathTextBox");
             this.savePathTextBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.savePathTextBox.Name = "savePathTextBox";
+            this.savePathTextBox.MouseEnter += new System.EventHandler(this.savePathTextBox_MouseEnter);
+            this.savePathTextBox.MouseLeave += new System.EventHandler(this.savePathTextBox_MouseLeave);
             // 
             // imageFoundGroupBox
             // 

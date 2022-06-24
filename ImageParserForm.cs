@@ -6,8 +6,10 @@ namespace ImageParser
 {
     public partial class ImageParserForm : Form
     {
-        private const string DefaultSavePathFolder = "ImageParserOutput";
+        private const string URLTextBoxHint = " type url here... ";
+        private const string SavePathTextBoxHint = " choose the destination folder... ";
 
+        private const string DefaultSavePathFolder = "ImageParserOutput";
         private readonly string DefaultSavePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
                                                   + @"\" + DefaultSavePathFolder;
 
@@ -17,8 +19,6 @@ namespace ImageParser
         public ImageParserForm()
         {
             InitializeComponent();
-
-            //TODO: make hints on textboxes disappear upon a click
 
             savePathTextBox.Text = DefaultSavePath;
             savePathFolderBrowserDialog.RootFolder = Environment.SpecialFolder.Desktop;
@@ -73,6 +73,29 @@ namespace ImageParser
             {
                 savePathTextBox.Text = savePathFolderBrowserDialog.SelectedPath;
             }
+        }
+        private void URLtextBox_MouseEnter(object sender, EventArgs e)
+        {
+            if (URLtextBox.Text == URLTextBoxHint)
+                URLtextBox.Text = default;
+        }
+
+        private void URLtextBox_MouseLeave(object sender, EventArgs e)
+        {
+            if (URLtextBox.Text.Length == 0 && !URLtextBox.Focused)
+                URLtextBox.Text = URLTextBoxHint;
+        }
+
+        private void savePathTextBox_MouseEnter(object sender, EventArgs e)
+        {
+            if (savePathTextBox.Text == SavePathTextBoxHint)
+                savePathTextBox.Text = default;
+        }
+
+        private void savePathTextBox_MouseLeave(object sender, EventArgs e)
+        {
+            if (savePathTextBox.Text.Length == 0 && !savePathTextBox.Focused)
+                savePathTextBox.Text = SavePathTextBoxHint;
         }
 
         #region Filters
