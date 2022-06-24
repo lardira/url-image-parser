@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Size.cs" />
     <Compile Include="ImageParserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +55,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ImageParserForm.en.resx">
+      <DependentUpon>ImageParserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImageParserForm.resx">
       <DependentUpon>ImageParserForm.cs</DependentUpon>
     </EmbeddedResource>
