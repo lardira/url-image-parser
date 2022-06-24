@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace ImageParser
 {
-    internal struct Size
+    internal struct Size<T> 
+        where T : struct
     {
-        public uint x, y;
+        public T x, y;
 
-        public Size(uint x = 0, uint y = 0)
+        public Size(T x = default, T y = default)
         {
             this.x = x;
             this.y = y;
