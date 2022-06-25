@@ -102,22 +102,22 @@ namespace ImageParser
 
         private void maxImageXUpDown_ValueChanged(object sender, EventArgs e)
         {
-            filterMaxImageSize.x = maxImageXUpDown.Value;
+            filterMaxImageSize[0] = maxImageXUpDown.Value;
         }
 
         private void maxImageYUpDown_ValueChanged(object sender, EventArgs e)
         {
-            filterMaxImageSize.y = maxImageYUpDown.Value;
+            filterMaxImageSize[1] = maxImageYUpDown.Value;
         }
 
         private void minImageXUpDown_ValueChanged(object sender, EventArgs e)
         {
-            filterMinImageSize.x = minImageXUpDown.Value;
+            filterMinImageSize[0] = minImageXUpDown.Value;
         }
 
         private void minImageYUpDown_ValueChanged(object sender, EventArgs e)
         {
-            filterMinImageSize.y = minImageYUpDown.Value;
+            filterMinImageSize[1] = minImageYUpDown.Value;
         }
 
         #endregion Filters
